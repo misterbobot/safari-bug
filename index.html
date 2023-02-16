@@ -83,8 +83,10 @@ setTimeout(() => {
 
 const changeGame = () => {
     deleteFirstIframe()
-    generateIframe(s3Urls[index % s3Urls.length]);
-    index += 1;
+    setTimeout(() => {
+        generateIframe(s3Urls[index % s3Urls.length]);
+        index += 1;
+    }, 500)
 }
 
 </script>
